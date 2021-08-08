@@ -1,0 +1,504 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+html, body{
+    scroll-behavior: smooth;
+    font-size: 16px;
+    font-family: 'Space Mono', monospace;
+    
+}
+
+.flex{
+    display: flex;
+}
+
+span{
+    display: inline-block;
+}
+
+section:not(#home){
+    padding: 100px 0 70px 0;
+}
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h2{
+    color: brown;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px #000;
+}
+
+h3{
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+}
+
+/************** HEADER SECTION *****************/
+
+header{
+    position: fixed;
+    color: antiquewhite;
+    width: 100%;
+    padding: 10px 15px 15px 15px;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 100;
+    box-shadow: 0 0 5px #aaa;
+}
+
+.header{
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo{
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 1px solid antiquewhite;
+}
+
+
+
+.menu{
+    flex-direction: column;
+}
+
+.menu>li{
+    padding-bottom: 5px;
+}
+
+.menu>li>a{
+    color: antiquewhite;
+    transition: all .25s ease-in-out;
+}
+
+.menu>li>a:hover{
+    color: burlywood;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 12px;
+    right: 35px;
+    background: none;
+    outline: none;
+    border: none;
+    color: antiquewhite;
+    font-size: 18px;
+}
+
+.toggle-none{
+    display: none;
+}
+
+.toggle-flex{
+    display: flex;
+    flex-direction: column;
+    color: antiquewhite;
+    z-index: 10;
+}
+
+
+/************** HOME SECTION *****************/
+
+#home{
+    /*position: absolute;*/
+    height: 100vh;
+    width: 100%;
+    background-image: url(../image/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home{
+    height: 100vh;
+    width: 100%;
+
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.headline{
+    text-transform: uppercase;
+    font-size: 2.1rem;
+    margin-bottom: 1rem;
+    color: transparent;
+    /*text-shadow: 2px 2px 3px #000;*/
+    animation: text_dev 4s linear forwards;
+    animation-delay: 3s;
+}
+
+
+h1{
+    flex-direction: column;
+    font-size: 1.4rem;
+    letter-spacing: -15px;
+    color: transparent;
+    animation: text_name 3s linear forwards;
+   
+}
+
+.last{
+    position: relative;
+    top: -100px;
+    animation-delay: 1s;
+}
+
+.first{
+    
+    animation-delay: 4s;
+}
+
+.work{
+    position: relative;
+    bottom: -80px;
+    padding-top: 10px;
+    animation: text_work 3s linear forwards;
+    animation-delay: 6s;
+    letter-spacing: -15px;
+}
+
+@keyframes text_dev {
+    100%{
+    color: burlywood;
+    text-shadow: 2px 2px 3px #000;
+    }
+}
+
+
+@keyframes text_name {
+    50% {
+        top: -50px;
+        color: #444
+    }
+    100% {
+        top: 0;
+        letter-spacing: 3px;
+        color: #eee;
+    }
+}
+
+@keyframes text_work {
+    50% {
+        color: #444;
+        bottom: -40px
+    }
+   
+    100% {
+        padding-top: 10px;
+        letter-spacing: 2px;
+        color: coral;
+        bottom: 0;
+    }
+ 
+}
+
+/************ SERVICES SECTION **************/
+
+.services-titles{
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Ubuntu', sans-serif;
+    flex-direction: column;
+    align-items: center;
+}
+
+#services p{
+    color: cornflowerblue;
+    padding: 10px 0 20px 0;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.fa-palette, .fa-code, .fa-laptop-code{
+    color: brown;
+    font-size: 2rem;
+    padding: 15px;
+}
+
+.cards{
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards img{
+    width: 100%;
+}
+
+.card1{
+    width: 75%;
+    text-align: center;  
+    margin: 15px 0;
+    padding: 10px;
+    box-shadow: 0 0 5px #aaa;
+    transition: all .7s ease;
+}
+
+.card1:hover{
+    box-shadow: 0 0 10px #444;
+}
+
+.card2{
+    max-width: 75%;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgba(255, 255, 255, .5);
+    margin: 15px 0;
+    box-shadow: 0 0 5px #aaa;
+    transition: all .7s ease;
+}
+
+.card2:hover{
+    box-shadow: 0 0 10px #444;
+}
+
+/************ SKILL SECTION ***************/
+
+#skill{
+    background-color: #fff;
+    background-image: url(../image/laptop-2558400.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+.skill{
+    flex-direction: column;
+    align-items: center;
+
+   
+}
+
+.skill-box{
+    width: 75%;
+    height: 170px;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 15px 0;
+    align-items: center;
+    transition: all .7s ease;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.skill-box:hover{
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.skill i{
+    font-size: 7rem;
+}
+
+.fa-html5{
+    color: orange;
+}
+
+.fa-css3-alt{
+    color: blue;
+}
+
+.fa-wordpress-simple{
+    color: darkcyan;
+}
+
+.fa-js-square{
+    color: gold;
+}
+
+.fa-react{
+    color: lightseagreen;
+}
+
+.fa-php{
+    color: cornflowerblue;
+}
+
+.fa-database{
+    color: brown;
+}
+
+.fa-github{
+    color: blueviolet;
+}
+
+
+.skill-box>span{
+    flex: 1;
+    font-size: 1.8rem;
+}
+
+
+/************ REFERENC SECTION ***************/
+
+#referenc{
+    min-height: 500px;
+}
+
+
+
+/************ CONTACT SECTION ***************/
+
+#contact{
+    background-image: url(../image/hacking-2903156_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.contact{
+    flex-direction: column;
+}
+
+.adress{
+    flex-direction: column;
+    color: deepskyblue;
+    padding-bottom: 30px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.3rem;
+}
+
+.adi{
+    padding-top: 15
+    px;
+}
+
+.fa-envelope{
+    color: deepskyblue;
+}
+
+.fa-globe{
+    color: deepskyblue;
+}
+
+
+
+
+/************* FOOTER *********************/
+
+footer{
+    background-color: #000;
+    padding: 20px;
+    margin: 0 auto;
+    color: azure;
+    font-size: .7rem;
+    text-align: center;
+}
+
+
+/************* MEDIA QUERY *****************/
+
+@media screen and (min-width:768px) {
+    .header{
+        flex-direction: row;
+    }
+
+    #menu{
+        display: flex;
+    }
+
+    .menu-toggle{
+        display: none;
+    }
+
+    .menu{
+        flex-direction: row;
+    }
+
+    .menu>li{
+        padding: 0  8px;
+    }
+}
+
+@media screen and (min-width:768px) {
+ .headline, h1{
+     margin-left: 30px;
+ }
+
+ .headline{
+    font-size: 2.4rem;
+ }
+ 
+ h1{
+    font-size: 1.6rem;
+ }
+
+}
+
+@media screen and (min-width:768px) {
+    .services-titles{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+}
+
+@media screen and (min-width:768px) {
+    .cards{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .card1{
+        margin: 15px;
+    }
+
+    .card2{
+        margin: 15px;
+    }
+
+}
+
+@media screen and (min-width:768px) {
+    .skill{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .skill-box{
+        flex-direction: row;
+        width: 45%;
+    }
+
+}
+
+
+@media screen and (min-width:992px) {
+    .skill-box{
+        
+        width: 30%;
+    }
+
+}
